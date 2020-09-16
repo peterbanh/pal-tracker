@@ -1,9 +1,12 @@
 package io.pivotal.pal.tracker;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RestController
 public class TimeEntryController {
 
     private TimeEntryRepository timeEntriesRepo;
@@ -12,6 +15,7 @@ public class TimeEntryController {
         this.timeEntriesRepo = timeEntriesRepo;
     }
 
+    @PostMapping
     public ResponseEntity create(TimeEntry timeEntry) {
         return null;
     }
